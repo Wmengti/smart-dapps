@@ -1,8 +1,8 @@
 const { verify } = require('../utils/verify');
 const {
   developmentChains,
-  fontendContractAddress,
-  fontendContractabi,
+  whitelistAddress,
+  whitelistAbi,
 } = require('../helper-hardhat-config');
 const fs = require('fs');
 const { ethers } = require('hardhat');
@@ -21,11 +21,11 @@ module.exports = async ({ deployments, getNamedAccounts }) => {
     waitConfirmations: network.config.blockConfirmations || 1,
   });
 
-  fs.writeFileSync(fontendContractAddress, JSON.stringify(whitelist.address));
+  fs.writeFileSync(whitelistAddress, JSON.stringify(whitelist.address));
 
   const whitelistabi = await ethers.getContract('WhiteList');
   fs.writeFileSync(
-    fontendContractabi,
+    whitelistAbi,
     whitelistabi.interface.format(ethers.utils.FormatTypes.json)
   );
 
@@ -37,4 +37,4 @@ module.exports = async ({ deployments, getNamedAccounts }) => {
   }
 };
 
-module.exports.tags = ['whitelist'];
+module.exports.tags = ['whitelist', 'all'];

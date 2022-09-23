@@ -1,13 +1,13 @@
 import Head from 'next/head';
-import styles from '../styles/Home.module.css';
+import styles from '../../styles/Whitelist.module.css';
+
 import Web3Modal from 'web3modal';
 import { providers, Contract } from 'ethers';
 import { useState, useRef, useEffect } from 'react';
+import whitelistABI from '../../constants/WLabi.json';
+import whitelistAddress from '../../constants/WLaddress.json';
 
-import whitelistABI from '../constants/WLabi.json';
-import whitelistAddress from '../constants/WLaddress.json';
-
-export default function Home() {
+export default function WhiteList() {
   const [walletConnected, setWalletConnected] = useState(false);
 
   const [joinedWhitelist, setJoinedWhitelist] = useState(false);

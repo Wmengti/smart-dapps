@@ -4,29 +4,20 @@
 // You can also run a script with `npx hardhat run <script>`. If you do that, Hardhat
 // will compile your contracts, add the Hardhat Runtime Environment's members to the
 // global scope, and execute the script.
-const hre = require('hardhat');
-const fs = require('fs');
+const { METADATA_URL } = require('../helper-hardhat-config');
+const { ethers } = require('hardhat');
+const whitelistAddress = require('../../Dapps/constants/WLaddress.json');
 
-async function main() {
-  const Mood = await hre.ethers.getContractFactory('WhiteList');
-  const mood = await Mood.deploy();
-
-  await mood.deployed();
-
-  console.log(`Mood address: ${mood.address}`);
-  fs.writeFileSync(
-    '../constants/MoodAbi.json',
-    mood.interface.format(ethers.utils.FormatTypes.json)
-  );
-  fs.writeFileSync(
-    '../constants/MoodAddress.json',
-    JSON.stringify(mood.address)
-  );
+async function start() {
+  const cryptodevs = await ethers.getContract('CryptoDevs');
+  const tx = await cryptodevs.startPresale(10);
+  await tx.wait(1);
+  console.log(`the mint is starting, transaction is ${tx}`);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
 // and properly handle errors.
-main().catch((error) => {
+start().catch((error) => {
   console.error(error);
   process.exitCode = 1;
 });
