@@ -21,6 +21,9 @@ export default function Home() {
             <li>
               <Link href='/nft-collection'>NFTs</Link>
             </li>
+            <li>
+              <Link href='/tokens'>Tokens</Link>
+            </li>
           </ul>
         </nav>
       </header>

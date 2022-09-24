@@ -238,8 +238,8 @@ export default function NFTcollection() {
   return (
     <div>
       <Head>
-        <title>WhiteList Dapp</title>
-        <meta name='description' content='WhiteList-Dapp' />
+        <title>NFT Mint Dapp</title>
+        <meta name='description' content='NFT Mint Dapp' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <div className={styles.container}>
