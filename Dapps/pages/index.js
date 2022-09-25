@@ -24,6 +24,9 @@ export default function Home() {
             <li>
               <Link href='/tokens'>Tokens</Link>
             </li>
+            <li>
+              <Link href='/dao'>DAO</Link>
+            </li>
           </ul>
         </nav>
       </header>

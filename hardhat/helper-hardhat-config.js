@@ -8,6 +8,10 @@ const crpytodevsAddress = '../Dapps/constants/CDaddress.json';
 const crpytodevAbi = '../Dapps/constants/CDabi.json';
 const crpytodevsTokenAddress = '../Dapps/constants/CDTokenAddress.json';
 const crpytodevTokenAbi = '../Dapps/constants/CDTokenAbi.json';
+const daoAddress = '../Dapps/constants/daoAddress.json';
+const daoAbi = '../Dapps/constants/daoAbi.json';
+const nftmarketAddress = '../Dapps/constants/nftmarketAddress.json';
+const nftmarketAbi = '../Dapps/constants/nftmarketAbi.json';
 module.exports = {
   developmentChains,
   VERIFICATION_BLOCK_CONFIRMATIONS,
@@ -18,4 +22,8 @@ module.exports = {
   crpytodevAbi,
   crpytodevsTokenAddress,
   crpytodevTokenAbi,
+  daoAddress,
+  daoAbi,
+  nftmarketAddress,
+  nftmarketAbi,
 };

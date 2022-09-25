@@ -1,7 +1,6 @@
 const {
-  METADATA_URL,
-  crpytodevsAddress,
-  crpytodevAbi,
+  nftmarketAddress,
+  nftmarketAbi,
   developmentChains,
 } = require('../helper-hardhat-config');
 const { verify } = require('../utils/verify');
@@ -11,27 +10,27 @@ const { ethers } = require('hardhat');
 module.exports = async ({ deployments, getNamedAccounts }) => {
   const { deploy, log } = deployments;
   const { deployer } = await getNamedAccounts();
-  const whiltlist = await ethers.getContract('WhiteList');
-  args = [METADATA_URL, whiltlist.address];
-  const cryptodevs = await deploy('CryptoDevs', {
+
+  args = [];
+  const nftmarket = await deploy('FackNFTMarketplace', {
     from: deployer,
     log: true,
     args: args,
     waitConfirmations: network.config.blockConfirmations || 1,
   });
-  fs.writeFileSync(crpytodevsAddress, JSON.stringify(cryptodevs.address));
-  const cdContract = await ethers.getContract('CryptoDevs');
+  fs.writeFileSync(nftmarketAddress, JSON.stringify(nftmarket.address));
+  const nftmarketContract = await ethers.getContract('FackNFTMarketplace');
   fs.writeFileSync(
-    crpytodevAbi,
-    cdContract.interface.format(ethers.utils.FormatTypes.json)
+    nftmarketAbi,
+    nftmarketContract.interface.format(ethers.utils.FormatTypes.json)
   );
 
   if (
     !developmentChains.includes(network.name) &&
     process.env.ETHERSCAN_API_KEY
   ) {
-    await verify(cryptodevs.address, args);
+    await verify(nftmarket.address, args);
   }
 };
 
-module.exports.tags = ['all', 'cryptodevs'];
+module.exports.tags = ['all', 'DAO'];

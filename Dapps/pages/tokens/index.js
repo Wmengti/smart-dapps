@@ -219,8 +219,8 @@ export default function Tokens() {
             You can claim or mint Crypto Dev tokens here.
           </div>
           <div className={styles.description}>
-            Overall <strong>{tokensMinted.toString()}</strong>/10000 have been
-            minted!!!
+            Overall <strong>{parseInt(tokensMinted.toString())}</strong>/10000
+            have been minted!!!
           </div>
           {mintButtonHandler()}
         </div>
