@@ -3,6 +3,7 @@ import styles from './LiquidityTable.module.css';
 import LineChart from './LineChart';
 import ToolTip from './ToolTip';
 import { useState } from 'react';
+import LineChartMobile from './LineChartMobile';
 
 const LiquidityTable = (props) => {
   const [horverLoc, setHoverLoc] = useState(null);
@@ -52,6 +53,11 @@ const LiquidityTable = (props) => {
       <div className={styles.row}>
         <div className={styles.chart}>
           <LineChart data={data} onChartHover={handleChartHover} />
+        </div>
+      </div>
+      <div className={styles.row_mobile}>
+        <div className={styles.chart}>
+          <LineChartMobile data={data} onChartHover={handleChartHover} />
         </div>
       </div>
     </div>
