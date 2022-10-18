@@ -8,34 +8,36 @@ const Navigation = (props) => {
   return (
     <div className={styles.header_back}>
       <header className={styles.header}>
-        <a href='/#'>
-          <img
-            className={styles.logo}
-            alt='Crypto Dev logo'
-            src='/ethereumlogo.png'
-          />
-        </a>
+        <Link href='/#'>
+          <a>
+            <img
+              className={styles.logo}
+              alt='Crypto Dev logo'
+              src='/ethereumlogo.png'
+            />
+          </a>
+        </Link>
         <nav className={styles.main_nav}>
           <ul className={styles.main_nav_list}>
             <li>
-              <a className={styles.main_nav_link} href='/#whitelist'>
-                WhiteList
-              </a>
+              <Link href='/#whitelist'>
+                <a className={styles.main_nav_link}>WhiteList</a>
+              </Link>
             </li>
             <li>
-              <a className={styles.main_nav_link} href='/#NFTs'>
-                NFTs
-              </a>
+              <Link className={styles.main_nav_link} href='/#NFTs'>
+                <a className={styles.main_nav_link}>NFTs</a>
+              </Link>
             </li>
             <li>
-              <a className={styles.main_nav_link} href='/#Tokens'>
-                Tokens
-              </a>
+              <Link className={styles.main_nav_link} href='/#Tokens'>
+                <a className={styles.main_nav_link}>Tokens</a>
+              </Link>
             </li>
             <li>
-              <a className={styles.main_nav_link} href='/#DAO'>
-                DAO
-              </a>
+              <Link className={styles.main_nav_link} href='/#DAO'>
+                <a className={styles.main_nav_link}>DAO</a>
+              </Link>
             </li>
           </ul>
           <ConnectWallet />
