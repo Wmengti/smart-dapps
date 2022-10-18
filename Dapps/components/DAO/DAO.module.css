@@ -1,0 +1,147 @@
+.section_dao {
+  padding: 12rem;
+  text-align: center;
+}
+
+.section_topic {
+  font-size: 3.2rem;
+}
+.dao_main {
+  margin: 10rem auto;
+  display: flex;
+  justify-content: center;
+}
+
+.dao_btn_advice,
+.dao_btn_advice:hover,
+.dao_btn_advice:active {
+  background-color: #fff;
+  border-radius: 1rem;
+  color: #000;
+}
+
+.dao_btn_advice {
+  width: 70%;
+
+  display: flex;
+  box-shadow: 6px 6px 0 0 #031926;
+  flex-direction: column;
+  font-size: 1.6rem;
+  position: relative;
+}
+
+.dao_advice_dotted {
+  width: 100%;
+  height: 4rem;
+  border: 2px dashed #000;
+  background-color: #eefbf3;
+}
+
+.dao_advice_dsc {
+  line-height: 1;
+  margin-top: 4rem;
+}
+
+.dao_advice_enter {
+  align-self: center;
+  border: 1px solid #000;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  margin: 2rem;
+  box-shadow: 3px 3px 0 0 #031926;
+  background-color: #087f5b;
+}
+
+.dao_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.dao_btn_advice_desc {
+  max-width: 28rem;
+  font-size: 1.6rem;
+  line-height: 2.5;
+  font-weight: 600;
+  text-align: start;
+}
+
+.dao_advice_img {
+  width: 6rem;
+  height: 6rem;
+  position: absolute;
+  transform: translate(-20%, -60%) rotate(-20deg);
+  box-shadow: 1px 1px 0 0 #031926;
+  border-radius: 1rem;
+  border: 2px solid #000;
+}
+
+.dao_proposal_dsc {
+  margin-top: 0;
+}
+
+.dao_proposal_line_1 {
+  margin-bottom: 0.5rem;
+  width: 80%;
+  height: 1px;
+  border: 2px solid #888;
+}
+.dao_proposal_line_2 {
+  margin-bottom: 0.5rem;
+  width: 100%;
+  height: 1px;
+  border: 2px solid #888;
+}
+
+.dao_proposal_line_3 {
+  margin-bottom: 10rem;
+  width: 70%;
+  height: 1px;
+  border: 2px solid #888;
+}
+.dao_single_proposal {
+  width: 100%;
+  /* height: 6rem; */
+  border: 1px solid #000;
+  background-color: #eefbf3;
+  display: flex;
+  gap: 0.5rem;
+  box-shadow: 2px 2px 0 0 #031926;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  position: absolute;
+  right: 0;
+  transform: translate(20%, 150%);
+}
+
+.dao_proposal_img {
+  width: 3rem;
+  height: 3rem;
+  align-self: center;
+}
+
+.dao_proposal_name {
+  font-size: 1.2rem;
+  line-height: 0;
+  text-align: start;
+}
+
+.dao_proposal_text {
+  font-size: 0.8rem;
+  text-align: start;
+}
+
+.dao_vote_icon {
+  width: 6rem;
+  height: 6rem;
+  stroke: #fff;
+  fill: #087f5b;
+  border: #fff;
+}
+.dao_vote_proposal {
+  width: 100%;
+  display: flex;
+  /* font-size: 1.2rem; */
+}

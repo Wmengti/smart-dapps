@@ -10,7 +10,7 @@ const whitelistAddress = require('../../Dapps/constants/WLaddress.json');
 
 async function start() {
   const cryptodevs = await ethers.getContract('CryptoDevs');
-  const tx = await cryptodevs.startPresale(10);
+  const tx = await cryptodevs.startPresale(5);
   await tx.wait(1);
   console.log(`the mint is starting, transaction is ${tx}`);
 }

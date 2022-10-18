@@ -1,0 +1,23 @@
+.DAOvoteList {
+  z-index: 10;
+  padding: 0 4rem;
+}
+
+.DAOvoteList_title {
+  margin-top: 8rem;
+  padding: 4rem;
+  text-align: center;
+  font-size: 3.6rem;
+}
+.DAOvoteList_nest {
+  display: flex;
+  justify-content: center;
+}
+.DAOvoteList_discribe {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+}

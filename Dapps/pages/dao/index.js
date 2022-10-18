@@ -33,7 +33,7 @@ export default function NFTcollection() {
     const provider = await web3ModalRef.current.connect();
     const web3Provider = new providers.Web3Provider(provider);
     const { chainId } = await web3Provider.getNetwork();
-    if (chainId !== 4) {
+    if (chainId !== 5) {
       window.alert('Change the network to Rinkeby');
       throw new Error('Change network to Rinkeby');
     }

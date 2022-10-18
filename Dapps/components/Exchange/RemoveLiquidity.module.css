@@ -1,0 +1,21 @@
+.Liquidity {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+  /* width: 100%; */
+  font-size: 1.8rem;
+  line-height: 2;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  padding: 0;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+.input {
+  padding: 1rem;
+}

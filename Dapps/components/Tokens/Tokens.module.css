@@ -1,0 +1,17 @@
+.section_tokens {
+  background-color: #6e61ff;
+  margin: 0 auto;
+  padding: 6rem 6rem;
+}
+
+.tokens {
+  margin: 6rem auto;
+  /* padding: 15rem 6rem; */
+  max-width: 150rem;
+
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 4.8rem;
+}

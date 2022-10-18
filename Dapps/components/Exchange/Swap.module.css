@@ -1,0 +1,55 @@
+.swap {
+  display: flex;
+  flex-direction: column;
+  /* flex-basis: 100%; */
+}
+
+.swap_tab {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* flex-grow: 1; */
+  /* flex-basis: 100%; */
+}
+
+.select_tab {
+  border: none;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+.balance {
+  font-size: 1.2rem;
+}
+
+.to {
+  width: 2.4rem;
+  align-self: center;
+  margin-top: 2rem;
+}
+
+.change {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  /* flex-basis: 100%; */
+}
+.change_in {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-between;
+  /* flex-grow: 1;
+  flex-basis: 100%; */
+}
+
+.btn {
+  padding: 0;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.input {
+  padding: 1rem;
+}

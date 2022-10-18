@@ -12,6 +12,8 @@ const daoAddress = '../Dapps/constants/daoAddress.json';
 const daoAbi = '../Dapps/constants/daoAbi.json';
 const nftmarketAddress = '../Dapps/constants/nftmarketAddress.json';
 const nftmarketAbi = '../Dapps/constants/nftmarketAbi.json';
+const exchangeAddress = '../Dapps/constants/exchangeAddress.json';
+const exchangeAbi = '../Dapps/constants/exchangeAbi.json';
 module.exports = {
   developmentChains,
   VERIFICATION_BLOCK_CONFIRMATIONS,
@@ -26,4 +28,6 @@ module.exports = {
   daoAbi,
   nftmarketAddress,
   nftmarketAbi,
+  exchangeAbi,
+  exchangeAddress,
 };

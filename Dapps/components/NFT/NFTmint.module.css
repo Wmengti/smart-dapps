@@ -1,0 +1,76 @@
+.section_NFTs {
+  padding: 6rem;
+  margin: 15rem 0;
+}
+
+.mint {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 9.6rem;
+  /* margin: 4rem auto 10rem; */
+}
+
+.card {
+  width: 35rem;
+  height: 35rem;
+
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding: 3.6rem;
+  border-radius: 3rem;
+  color: #000;
+  background-color: #dcf7e7;
+  border: 2px solid #000;
+  border-color: #000;
+
+  font-family: inherit;
+
+  box-shadow: 3px 3px 0 0 #031926;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+/* .card:last-child {
+  margin-bottom: 1rem;
+} */
+
+.ountdown {
+  display: flex;
+  flex-direction: column;
+}
+
+.times {
+  padding: 0;
+  list-style: none;
+  font-size: 2.4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.times3 {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.h2 {
+  font-size: 1.8rem;
+}
+
+.tokenId {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  font-size: 3.6rem;
+}
+
+.card_btn {
+  position: absolute;
+  bottom: 10%;
+}

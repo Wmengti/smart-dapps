@@ -20,6 +20,7 @@ contract CryptoDevs is ERC721Enumerable, Ownable {
     uint256 public presaleEnded;
     string _baseTokenURI;
     IWhiteList whitelist;
+    bool public wlminted;
 
     modifier onlyWhenNotPaused() {
         require(!_paused, "Contract currently paused");
@@ -50,8 +51,9 @@ contract CryptoDevs is ERC721Enumerable, Ownable {
         );
         uint256 currentId = tokenIds.current();
         require(currentId < maxTokenIds, "Exceeded maximum Crypto Devs supply");
-        require(msg.value >= _price, "Ether sent is not correct");
+        require(wlminted == false, "You are already minted!");
         tokenIds.increment();
+        wlminted = true;
         _safeMint(msg.sender, currentId);
     }
 
