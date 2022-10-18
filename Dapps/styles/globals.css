@@ -66,6 +66,7 @@ body {
   /* font-family: 'Noto Sans Mono', monospace; */
   /* font-family: 'Dancing Script', cursive; */
   /* overflow: hidden; */
+  overflow-x: hidden;
 }
 html {
   font-size: 62.5%;
