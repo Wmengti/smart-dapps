@@ -129,7 +129,7 @@ const LineChartMoblie = (props) => {
         </text>
         <text
           // transform={`translate(${svgWidth + yLabelSize}, ${svgHeight})`}
-          transform={`translate(${yLabelSize + 350}, ${svgHeight})`}
+          transform={`translate(${yLabelSize + 300}, ${svgHeight})`}
           textAnchor='end'
         >
           {data[data.length - 1].date}
