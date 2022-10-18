@@ -77,4 +77,12 @@
     font-weight: 600;
     margin-right: 0rem;
   }
+  .footer_desc {
+    align-self: center;
+  }
+
+  .footer_desc_text {
+    color: #cdd1d4;
+    font-size: 1.6rem;
+  }
 }

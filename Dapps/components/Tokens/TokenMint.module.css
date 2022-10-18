@@ -44,3 +44,9 @@
   align-self: center;
   margin-top: 2.4rem;
 }
+
+@media screen and (max-width: 34em) {
+  .mint {
+    margin: 2rem;
+  }
+}
