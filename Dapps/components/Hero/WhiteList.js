@@ -110,6 +110,9 @@ const WhiteList = () => {
         <p className={styles.description}>
           {numberOfWL} have already joined the Whitelist.{' '}
         </p>
+        <p className={styles.desc_mobile}>
+          {numberOfWL} have already joined the Whitelist.{' '}
+        </p>
         {renderButton()}
       </section>
     </div>

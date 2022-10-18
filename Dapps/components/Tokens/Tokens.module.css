@@ -15,3 +15,10 @@
   align-items: center;
   gap: 4.8rem;
 }
+
+@media screen and (max-width: 34em) {
+  .tokens {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}

@@ -50,3 +50,29 @@
   color: #fff;
   border-bottom: 1px solid white;
 }
+
+@media screen and (max-width: 34em) {
+  .footer_section_sub {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0 auto;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .footer_line {
+    align-self: center;
+    width: 100%;
+    height: 1px;
+
+    border: 2px solid #68757d;
+    margin-left: 4rem;
+  }
+  .footer_logo_text {
+    color: #f1f6f1;
+    font-size: 4.4rem;
+    font-weight: 600;
+    margin-right: 0rem;
+  }
+}

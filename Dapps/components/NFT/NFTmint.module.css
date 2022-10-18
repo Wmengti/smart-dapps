@@ -74,3 +74,22 @@
   position: absolute;
   bottom: 10%;
 }
+
+@media screen and (max-width: 34em) {
+  .section_NFTs {
+    padding: 2rem;
+    margin: 0;
+  }
+
+  .mint {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 9.6rem;
+    /* margin: 4rem auto 10rem; */
+  }
+  .card {
+    align-self: center;
+  }
+}

@@ -24,6 +24,9 @@
   font-size: 1.6rem;
   margin-top: 1.6rem;
 }
+.desc_mobile {
+  display: none;
+}
 
 .button1 {
   display: flex;
@@ -33,4 +36,26 @@
 .icon {
   width: 2rem;
   height: 2rem;
+}
+
+@media screen and (max-width: 34em) {
+  .h1 {
+    text-align: center;
+  }
+
+  .description {
+    display: none;
+  }
+
+  .desc_mobile {
+    display: block;
+    font-size: 1.8rem;
+  }
+
+  .hero {
+    align-items: center;
+  }
+  .btn {
+    width: 100%;
+  }
 }

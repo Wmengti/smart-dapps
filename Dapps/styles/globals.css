@@ -112,12 +112,18 @@ button:active {
   background-color: #6366f1;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
   body {
     color: white;
     background: black;
+  }
+} */
+
+@media screen and (max-width: 34em) {
+  html {
+    font-size: 40%;
   }
 }

@@ -60,6 +60,9 @@
   align-items: center;
 }
 
+.mobile_desc {
+  display: none;
+}
 .dao_btn_advice_desc {
   max-width: 28rem;
   font-size: 1.6rem;
@@ -144,4 +147,29 @@
   width: 100%;
   display: flex;
   /* font-size: 1.2rem; */
+}
+
+@media screen and (max-width: 34em) {
+  .section_dao {
+    padding: 2rem;
+  }
+
+  .dao_main {
+    margin: 5rem auto;
+    display: flex;
+    justify-content: center;
+  }
+  .dao_grid {
+    grid-template-columns: 1fr;
+  }
+  .dao_btn_advice_desc {
+    display: none;
+  }
+  .mobile_desc {
+    display: block;
+  }
+  .mobile_desc_text {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
 }

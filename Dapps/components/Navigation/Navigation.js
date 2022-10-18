@@ -25,17 +25,17 @@ const Navigation = (props) => {
               </Link>
             </li>
             <li>
-              <Link className={styles.main_nav_link} href='/#NFTs'>
+              <Link href='/#NFTs'>
                 <a className={styles.main_nav_link}>NFTs</a>
               </Link>
             </li>
             <li>
-              <Link className={styles.main_nav_link} href='/#Tokens'>
+              <Link href='/#Tokens'>
                 <a className={styles.main_nav_link}>Tokens</a>
               </Link>
             </li>
             <li>
-              <Link className={styles.main_nav_link} href='/#DAO'>
+              <Link href='/#DAO'>
                 <a className={styles.main_nav_link}>DAO</a>
               </Link>
             </li>

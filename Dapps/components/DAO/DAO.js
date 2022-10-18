@@ -41,6 +41,9 @@ const DAO = () => {
         <div className={styles.dao_main}>
           <div className={styles.dao_grid}>
             {/* <div> */}
+            <div className={styles.mobile_desc}>
+              <p className={styles.mobile_desc_text}>Click to advice</p>
+            </div>
             <button className={styles.dao_btn_advice} onClick={AdviceHandler}>
               <img className={styles.dao_advice_img} src='/advice.png' />
               <p className={styles.dao_advice_dsc}>advice: ##1</p>
@@ -49,6 +52,9 @@ const DAO = () => {
             </button>
             {/* </div> */}
             {/* <div> */}
+            <div className={styles.mobile_desc}>
+              <p className={styles.mobile_desc_text}>Click to proposal</p>
+            </div>
             <button className={styles.dao_btn_advice} onClick={ProposalHandler}>
               <p className={styles.dao_proposal_dsc}># proposal </p>
 
@@ -68,6 +74,9 @@ const DAO = () => {
             </button>
             {/* </div> */}
             {/* <div> */}
+            <div className={styles.mobile_desc}>
+              <p className={styles.mobile_desc_text}>Click to vote</p>
+            </div>
             <button
               className={styles.dao_btn_advice}
               onClick={() => Router.push('/dao_vote')}
