@@ -112,7 +112,7 @@ const DAO = () => {
 
             <div>
               <p className={styles.dao_btn_advice_desc}>
-                If you hava any advice for sustainable development.{' '}
+                If you have any advice for sustainable development.{' '}
                 <span style={{ fontWeight: 600 }}>Click above!</span>
               </p>
             </div>

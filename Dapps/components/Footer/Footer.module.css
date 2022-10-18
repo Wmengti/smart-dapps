@@ -55,19 +55,21 @@
   .footer_section_sub {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
     margin: 0 auto;
     gap: 1rem;
-    padding: 1rem;
+    padding: 0rem;
   }
 
   .footer_line {
     align-self: center;
-    width: 100%;
+    width: 80%;
     height: 1px;
 
     border: 2px solid #68757d;
-    margin-left: 4rem;
+
+    margin-left: 0rem;
   }
   .footer_logo_text {
     color: #f1f6f1;
