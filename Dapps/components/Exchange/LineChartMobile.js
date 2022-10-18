@@ -229,7 +229,7 @@ LineChartMoblie.defaultProps = {
   color: '#2196F3',
   pointRadius: 5,
   svgHeight: 250,
-  svgWidth: 2800,
+  svgWidth: 2000,
   xLabelSize: 10,
   yLabelSize: 20,
 };
