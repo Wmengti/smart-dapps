@@ -16,9 +16,9 @@ const Footer = () => {
         </div>
         <div className={styles.footer_line}></div>
         <div className={styles.footer_social}>
-          <Link href='/'>
+          {/* <Link href='/'>
             <a className={styles.footer_social_link}>Doc</a>
-          </Link>
+          </Link> */}
           <Link href='https://twitter.com/pangmadee'>
             <a className={styles.footer_social_link}>Twitter</a>
           </Link>
