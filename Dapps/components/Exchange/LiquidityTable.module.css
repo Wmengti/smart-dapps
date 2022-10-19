@@ -29,14 +29,9 @@
   font-size: 2.2rem;
   font-weight: 600;
 }
-/* @media screen and (max-width: 102em) {
-  .table {
-    max-width: 60rem;
+
+@media screen and (max-width: 51em) {
+  .section_table {
+    justify-self: center;
   }
-  .row {
-    display: none;
-  }
-  .row1 {
-    display: block;
-  }
-} */
+}

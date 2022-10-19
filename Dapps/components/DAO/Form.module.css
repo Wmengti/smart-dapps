@@ -1,11 +1,13 @@
 .form {
-  margin: 10rem;
+  margin: 10rem 5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
+.section_form {
+  padding: 0;
+}
 .form_group {
   display: flex;
   flex-direction: column;
@@ -30,4 +32,9 @@
 
 .form_label_proposal {
   font-size: 1.2rem;
+}
+@media screen and (max-width: 50em) {
+  .form {
+    margin: 5rem 2rem;
+  }
 }

@@ -36,7 +36,7 @@ const Form = (props) => {
     router.push('#DAO');
   }
   return (
-    <div>
+    <div className={styles.section_form}>
       {props.isAdvice ? (
         <form onSubmit={submitHandler} className={styles.form}>
           <div className={styles.form_group}>

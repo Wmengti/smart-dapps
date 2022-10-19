@@ -9,7 +9,7 @@ const LiquidityTable = (props) => {
   const [activePoint, setActivePoint] = useState(null);
   const [tableWidth, setTableWidth] = useState(350);
   const [svgWidth, setSvgWidth] = useState(5700);
-  const svgHeight = 350;
+  const [svgHeight, setSvgHeight] = useState(350);
 
   const [widowSize, setWindowSize] = useState();
   const getWindowSize = () => {
@@ -32,9 +32,13 @@ const LiquidityTable = (props) => {
     if (innerWidth < 1500 && innerWidth > 1024) {
       setSvgWidth(3.8 * innerWidth); //5700/1500
       setTableWidth(0.46 * innerWidth); //(5700/10+100)/1500
-    } else if (innerWidth < 707) {
-      setSvgWidth(8.06 * innerWidth); //5700/707
-      setTableWidth(0.95 * innerWidth); //(5700/10+100)/707
+    } else if (innerWidth < 816 && innerWidth > 474) {
+      setSvgWidth(6.98 * innerWidth); //5700/816
+      setTableWidth(0.85 * innerWidth); //(5700/10+100)/816
+    } else if (innerWidth < 475) {
+      setSvgWidth(6.98 * innerWidth); //5700/707
+      setTableWidth(0.9 * innerWidth); //(5700/10+100)/707
+      setSvgHeight(400);
     } else {
       setSvgWidth(5700);
       setTableWidth(670);
