@@ -86,3 +86,9 @@
     font-size: 1.6rem;
   }
 }
+
+@media screen and (max-width: 44em) {
+  .footer_desc_text {
+    text-align: center;
+  }
+}
