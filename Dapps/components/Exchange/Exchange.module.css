@@ -84,5 +84,7 @@
 @media screen and (max-width: 51em) {
   .section_exchange {
     justify-self: center;
+    width: 45rem;
+    height: 45rem;
   }
 }
