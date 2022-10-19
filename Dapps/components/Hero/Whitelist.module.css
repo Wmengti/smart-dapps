@@ -38,7 +38,7 @@
   height: 2rem;
 }
 
-@media screen and (max-width: 34em) {
+@media screen and (max-width: 44em) {
   .h1 {
     text-align: center;
   }

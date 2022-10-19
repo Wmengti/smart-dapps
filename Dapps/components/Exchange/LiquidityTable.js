@@ -2,12 +2,45 @@ import Image from 'next/image';
 import styles from './LiquidityTable.module.css';
 import LineChart from './LineChart';
 import ToolTip from './ToolTip';
-import { useState } from 'react';
-import LineChartMobile from './LineChartMobile';
+import { useEffect, useState } from 'react';
 
 const LiquidityTable = (props) => {
   const [horverLoc, setHoverLoc] = useState(null);
   const [activePoint, setActivePoint] = useState(null);
+  const [tableWidth, setTableWidth] = useState(350);
+  const [svgWidth, setSvgWidth] = useState(5700);
+  const svgHeight = 350;
+
+  const [widowSize, setWindowSize] = useState();
+  const getWindowSize = () => {
+    const { innerWidth, innerHeight } = window;
+    return { innerWidth, innerHeight };
+  };
+  useEffect(() => {
+    const windowResizeHandler = () => {
+      const size = getWindowSize();
+      setWindowSize(size);
+    };
+    window.addEventListener('resize', windowResizeHandler);
+    return () => {
+      window.removeEventListener('resize', windowResizeHandler);
+    };
+  }, []);
+  console.log(widowSize);
+
+  useEffect(() => {
+    if (innerWidth < 1500 && innerWidth > 1024) {
+      setSvgWidth(3.8 * innerWidth); //5700/1500
+      setTableWidth(0.46 * innerWidth); //(5700/10+100)/1500
+    } else if (innerWidth < 707) {
+      setSvgWidth(8.06 * innerWidth); //5700/707
+      setTableWidth(0.95 * innerWidth); //(5700/10+100)/707
+    } else {
+      setSvgWidth(5700);
+      setTableWidth(670);
+    }
+  }, [widowSize]);
+
   const data = [
     { date: '5:16pm', x: 0, y: 100 },
     { date: '6:16pm', x: 1, y: 130 },
@@ -40,24 +73,28 @@ const LiquidityTable = (props) => {
     setActivePoint(_activePoint);
   };
   return (
-    <div className={styles.table}>
-      {/* <img className={styles.img} src='/liquidity.png' /> */}
-      <div className={styles.table_lp_title}>Liquidity Pool</div>
-      <div className={styles.row}>
-        <div className={styles.popup}>
-          {horverLoc ? (
-            <ToolTip horverLoc={horverLoc} activePoint={activePoint} />
-          ) : null}
-        </div>
-      </div>
-      <div className={styles.row}>
-        <div className={styles.chart}>
-          <LineChart data={data} onChartHover={handleChartHover} />
-        </div>
-      </div>
-      <div className={styles.row_mobile}>
-        <div className={styles.chart}>
-          <LineChartMobile data={data} onChartHover={handleChartHover} />
+    <div className={styles.section_table}>
+      <div className={styles.table} style={{ width: tableWidth }}>
+        {/* <img className={styles.img} src='/liquidity.png' /> */}
+        <div className={styles.table_lp_title}>Liquidity Pool</div>
+        <div className={styles.table_chart}>
+          <div>
+            <div className={styles.popup}>
+              {horverLoc ? (
+                <ToolTip horverLoc={horverLoc} activePoint={activePoint} />
+              ) : null}
+            </div>
+          </div>
+          <div className={styles.row}>
+            <div className={styles.chart}>
+              <LineChart
+                data={data}
+                onChartHover={handleChartHover}
+                svgHeight={svgHeight}
+                svgWidth={svgWidth}
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>

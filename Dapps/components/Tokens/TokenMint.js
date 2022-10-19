@@ -141,7 +141,7 @@ const TokenMint = () => {
   }, [WalletCtx.account]);
 
   return (
-    <div>
+    <div className={styles.section_mint}>
       <nav className={styles.mint}>
         <div className={styles.wlmint}>
           <h2 className={styles.h2}>NFT Owner Claim</h2>

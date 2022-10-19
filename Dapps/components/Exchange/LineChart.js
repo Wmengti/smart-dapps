@@ -129,7 +129,7 @@ const LineChart = (props) => {
         </text>
         <text
           // transform={`translate(${svgWidth + yLabelSize}, ${svgHeight})`}
-          transform={`translate(${yLabelSize + 450}, ${svgHeight})`}
+          transform={`translate(${svgWidth / 8.6}, ${svgHeight})`}
           textAnchor='end'
         >
           {data[data.length - 1].date}
@@ -166,8 +166,6 @@ const LineChart = (props) => {
     if (relativeLoc - yLabelSize < 0) {
       stopHover();
     } else {
-      console.log('relativeLoc', relativeLoc);
-      console.log('closestPoint', closestPoint);
       setHoverLoc(relativeLoc);
       setActivePoint(closestPoint);
       onChartHover(relativeLoc, closestPoint);
@@ -204,23 +202,26 @@ const LineChart = (props) => {
     );
   };
   return (
-    <svg
-      width={svgWidth}
-      height={svgHeight}
-      viewBox={`0 0 ${svgWidth} ${svgHeight}`}
-      className={styles.linechart}
-      onMouseLeave={() => stopHover()}
-      onMouseMove={(e) => getCoords(e)}
-    >
-      <g>
-        {makeAxis()}
-        {makePath()}
-        {makeArea()}
-        {makeLabels()}
-        {hoverLoc ? createLine() : null}
-        {hoverLoc ? makeActivePoint() : null}
-      </g>
-    </svg>
+    <div className={styles.section_linechart}>
+      <svg
+        width={svgWidth}
+        height={svgHeight}
+        viewBox={`0 0 ${svgWidth} ${svgHeight}`}
+        className={styles.linechart}
+        preserveAspectRatio='none'
+        onMouseLeave={() => stopHover()}
+        onMouseMove={(e) => getCoords(e)}
+      >
+        <g>
+          {makeAxis()}
+          {makePath()}
+          {makeArea()}
+          {makeLabels()}
+          {hoverLoc ? createLine() : null}
+          {hoverLoc ? makeActivePoint() : null}
+        </g>
+      </svg>
+    </div>
   );
 };
 
@@ -228,8 +229,7 @@ LineChart.defaultProps = {
   liquidity: [],
   color: '#2196F3',
   pointRadius: 5,
-  svgHeight: 350,
-  svgWidth: 4000,
+
   xLabelSize: 20,
   yLabelSize: 40,
 };

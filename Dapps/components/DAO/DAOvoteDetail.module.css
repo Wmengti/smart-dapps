@@ -37,3 +37,9 @@
   height: 4rem;
   color: #000;
 }
+
+.voteDetail_reason {
+  word-wrap: break-word;
+  word-break: normal;
+  width: 100%;
+}

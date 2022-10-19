@@ -21,3 +21,25 @@
   justify-content: center;
   align-items: center;
 }
+
+@media screen and (max-width: 77.75em) {
+  .DAOvoteList_discribe {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 50em) {
+  .DAOvoteList_discribe {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    justify-content: center;
+    align-items: center;
+  }
+}

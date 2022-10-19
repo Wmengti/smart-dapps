@@ -46,11 +46,11 @@ const Form = (props) => {
             <textarea
               id='advice'
               className={styles.advice_textarea}
-              rows='10'
-              cols='60'
+              // rows='10'
+              // cols='60'
               required
-              maxlength='300'
-              minlength='20'
+              // maxlength='300'
+              minlength='10'
               ref={adviceInputRef}
             ></textarea>
           </div>

@@ -27,7 +27,7 @@ const DAOvoteDetail = (props) => {
             <span style={{ color: 'blue' }}>NFT:</span>
             {props.nft}
           </div>
-          <div>
+          <div className={styles.voteDetail_reason}>
             <span style={{ color: 'blue' }}>REASON:</span>
             {props.reason}
           </div>

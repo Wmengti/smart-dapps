@@ -149,7 +149,7 @@
   /* font-size: 1.2rem; */
 }
 
-@media screen and (max-width: 34em) {
+@media screen and (max-width: 44em) {
   .section_dao {
     padding: 2rem;
   }

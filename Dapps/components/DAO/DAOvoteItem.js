@@ -81,12 +81,15 @@ const DAOvoteItem = (props) => {
         <div>{moment(props.time).format('YYYY-MM-DD h:mma')}</div>
         <div>
           <span style={{ color: 'blue' }}>NFT:</span>
-          {props.title.substring(0, 14)}
-          ...
+          {props.title.length > 14
+            ? `${props.title.substring(0, 14)}...`
+            : props.title}
         </div>
-        <div>
+        <div className={styles.vote_reason}>
           <span style={{ color: 'blue' }}>REASON:</span>
-          {props.reason.substring(0, 40)}...
+          {props.reason.length > 40
+            ? `${props.reason.substring(0, 40)}...`
+            : props.reason}
           <button className={styles.vote_btn} onClick={voteDetailHandler}>
             <svg
               xmlns='http://www.w3.org/2000/svg'

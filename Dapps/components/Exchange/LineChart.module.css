@@ -1,4 +1,8 @@
+.section_linechart {
+}
 .linechart {
+  /* display: flex; */
+  max-width: 570rem;
   padding: 1px;
 }
 .linechart_path {

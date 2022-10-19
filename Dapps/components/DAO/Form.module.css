@@ -10,9 +10,16 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  width: 100%;
 }
 
+.advice_textarea {
+  height: 50rem;
+  display: inline-block;
+  padding: 2rem;
+}
 .form_label {
+  width: 100%;
   font-size: 2.4rem;
   font-weight: 600;
   margin-bottom: 2.4rem;

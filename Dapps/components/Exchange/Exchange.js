@@ -90,32 +90,34 @@ const Exchange = () => {
 
   return (
     <div className={styles.section_exchange}>
-      <div className={styles.selected}>
-        <div className={styles.tab1}>
-          <button
-            style={{ backgroundColor: selectTab ? '#fff' : '#c6ded0' }}
-            className={styles.tab_btn}
-            onClick={() => {
-              setSelectTab(true);
-              setSelectAdd('1');
-            }}
-          >
-            Swap
-          </button>
-        </div>
+      <div className={styles.section_exchange_sub}>
+        <div className={styles.selected}>
+          <div className={styles.tab1}>
+            <button
+              style={{ backgroundColor: selectTab ? '#fff' : '#c6ded0' }}
+              className={styles.tab_btn}
+              onClick={() => {
+                setSelectTab(true);
+                setSelectAdd('1');
+              }}
+            >
+              Swap
+            </button>
+          </div>
 
-        <div className={styles.tab2}>
-          <button
-            style={{ backgroundColor: selectTab ? '#c6ded0' : '#fff' }}
-            className={styles.tab_btn}
-            onClick={() => setSelectTab(false)}
-          >
-            Liquidity
-          </button>
+          <div className={styles.tab2}>
+            <button
+              style={{ backgroundColor: selectTab ? '#c6ded0' : '#fff' }}
+              className={styles.tab_btn}
+              onClick={() => setSelectTab(false)}
+            >
+              Liquidity
+            </button>
+          </div>
         </div>
-      </div>
-      <div className={styles.exchange}>
-        {selectTab ? <Swap /> : liquiditySelectHandler()}
+        <div className={styles.exchange}>
+          {selectTab ? <Swap /> : liquiditySelectHandler()}
+        </div>
       </div>
     </div>
   );

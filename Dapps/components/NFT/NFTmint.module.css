@@ -75,7 +75,7 @@
   bottom: 10%;
 }
 
-@media screen and (max-width: 34em) {
+@media screen and (max-width: 68em) {
   .section_NFTs {
     padding: 2rem;
     margin: 0;
