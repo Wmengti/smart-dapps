@@ -26,7 +26,8 @@ const LiquidityTable = (props) => {
       window.removeEventListener('resize', windowResizeHandler);
     };
   }, []);
-  console.log(widowSize);
+  // console.log(widowSize);
+  console.log('horverLoc', horverLoc, activePoint);
 
   useEffect(() => {
     if (innerWidth < 1500 && innerWidth > 1024) {

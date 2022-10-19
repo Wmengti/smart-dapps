@@ -14,6 +14,7 @@ const LineChart = (props) => {
     yLabelSize,
     xLabelSize,
   } = props;
+
   const getX = () => {
     return {
       min: data[0].x,

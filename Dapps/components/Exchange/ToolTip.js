@@ -8,6 +8,7 @@ const ToolTip = (props) => {
   let width = 100;
   placementStyles.width = width + 'px';
   placementStyles.left = props.horverLoc + svgLocation.left - width / 2;
+  console.log(placementStyles);
 
   return (
     <div className={styles.hover} style={placementStyles}>
