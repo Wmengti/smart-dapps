@@ -39,8 +39,12 @@
 }
 
 @media screen and (max-width: 44em) {
+  .section_hero {
+    padding: 6rem 2rem;
+  }
   .h1 {
     text-align: center;
+    font-size: 3.6rem;
   }
 
   .description {
@@ -54,8 +58,10 @@
 
   .hero {
     align-items: center;
+    padding: 0;
   }
   .btn {
     width: 100%;
+    margin-top: 5.6rem;
   }
 }
