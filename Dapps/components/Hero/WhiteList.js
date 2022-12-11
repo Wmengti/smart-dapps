@@ -33,7 +33,6 @@ const WhiteList = () => {
       console.error(e);
     }
   };
-
   const checkIfAddressInWhitelist = async () => {
     try {
       const _joinedWhitelist = await WLContract.whitelistedAddresses(
