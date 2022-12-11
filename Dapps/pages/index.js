@@ -45,7 +45,8 @@ export default function Home(props) {
       <Head>
         <title>Web3.0 Dapps</title>
         <meta name='description' content='WhiteList-Dapp' />
-        <meta name='twitter:card' content='summary' />
+        {/* <meta name='twitter:card' content='summary' /> */}
+        <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@pangmadee' />
         <meta name='twitter:title' content='0x3c test web3' />
         <meta name='twitter:description' content='Twitter share card' />
