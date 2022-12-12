@@ -13,23 +13,23 @@ function DAOProposalVote(props) {
   console.log('href', href);
   return (
     <div className={styles.dao_vote}>
-      <Head>
+      {/* <Head>
         <title>Web3.0 Dapps</title>
         <meta name='description' content='WhiteList-Dapp' />
         <meta name='twitter:card' content='summary' />
-        {/* <meta name='twitter:card' content='summary_large_image' /> */}
+
         <meta name='twitter:site' content='@pangmadee' />
         <meta name='twitter:title' content='0x3c test sub page web3' />
         <meta name='twitter:description' content='Twitter share card subpage' />
-        {/* <meta name='twitter:url' content='https://0x3c.xyz/dao_vote' />
-        <meta property='og:url' content='https://0x3c.xyz/dao_vote' /> */}
+        <meta name='twitter:url' content='https://0x3c.xyz/dao_vote' />
+        <meta property='og:url' content='https://0x3c.xyz/dao_vote' />
         <meta name='twitter:type' content='article' />
         <meta
           name='twitter:image'
           content='https://farm6.staticflickr.com/5510/14338202952_93595258ff_z.jpg'
         />
         <link rel='icon' href='/entericon.png' />
-      </Head>
+      </Head> */}
 
       <DAOvoteList proposals={props.proposals} />
     </div>
