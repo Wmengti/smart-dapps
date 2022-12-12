@@ -13,7 +13,7 @@ function DAOProposalVote(props) {
   console.log('href', href);
   return (
     <div className={styles.dao_vote}>
-      {/* <Head>
+      <Head>
         <title>Web3.0 Dapps</title>
         <meta name='description' content='WhiteList-Dapp' />
         <meta name='twitter:card' content='summary' />
@@ -29,7 +29,7 @@ function DAOProposalVote(props) {
           content='https://farm6.staticflickr.com/5510/14338202952_93595258ff_z.jpg'
         />
         <link rel='icon' href='/entericon.png' />
-      </Head> */}
+      </Head>
 
       <DAOvoteList proposals={props.proposals} />
     </div>
