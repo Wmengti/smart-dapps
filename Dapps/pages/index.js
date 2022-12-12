@@ -53,7 +53,7 @@ export default function Home(props) {
         <meta name='twitter:site' content='@pangmadee' />
         <meta name='twitter:title' content='0x3c test web3' />
         <meta name='twitter:description' content='Twitter share card' />
-        <meta name='twitter:url' content={href} />
+
         <meta
           name='twitter:image'
           content='https://farm6.staticflickr.com/5510/14338202952_93595258ff_z.jpg'
