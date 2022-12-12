@@ -28,6 +28,7 @@ function DAOProposalVote(props) {
           name='twitter:image'
           content='https://farm6.staticflickr.com/5510/14338202952_93595258ff_z.jpg'
         />
+        <link rel='canonical' href='https://0x3c.xyz/dao_vote' />
         <link rel='icon' href='/entericon.png' />
       </Head>
 
