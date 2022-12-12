@@ -15,7 +15,7 @@ function DAOProposalVote(props) {
     <div className={styles.dao_vote}>
       <Head>
         <title>Web3.0 Dapps</title>
-        <meta name='description' content='WhiteList-Dapp' />
+        {/* <meta name='description' content='WhiteList-Dapp' />
         <meta name='twitter:card' content='summary' />
 
         <meta name='twitter:site' content='@pangmadee' />
@@ -27,7 +27,7 @@ function DAOProposalVote(props) {
         <meta
           name='twitter:image'
           content='https://farm6.staticflickr.com/5510/14338202952_93595258ff_z.jpg'
-        />
+        /> */}
         <link rel='icon' href='/entericon.png' />
       </Head>
 
