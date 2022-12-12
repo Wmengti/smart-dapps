@@ -10,6 +10,7 @@ const WhiteList = () => {
   const [loading, setLoading] = useState(false);
   const WalletCtx = useContext(WalletContext);
   const WLContract = WalletCtx.WLContract;
+
   // console.log('wl', joinedWhitelist);
   // console.log('1', WLContract);
 
@@ -112,6 +113,7 @@ const WhiteList = () => {
         <p className={styles.desc_mobile}>
           {numberOfWL} have already joined the Whitelist.{' '}
         </p>
+
         {renderButton()}
       </section>
     </div>

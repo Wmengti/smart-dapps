@@ -9,8 +9,11 @@ import { useEffect, useContext, useState, useRef } from 'react';
 import WalletContext from '../store/wallet-context';
 import { MongoClient } from 'mongodb';
 import moment from 'moment';
+import { useRouter } from 'next/router';
 
 export default function Home(props) {
+  const router = useRouter();
+  const { href } = router;
   const lpBalanceContractRef = useRef();
 
   const walletCtx = useContext(WalletContext);
@@ -50,6 +53,7 @@ export default function Home(props) {
         <meta name='twitter:site' content='@pangmadee' />
         <meta name='twitter:title' content='0x3c test web3' />
         <meta name='twitter:description' content='Twitter share card' />
+        <meta name='twitter:url' content={href} />
         <meta
           name='twitter:image'
           content='https://farm6.staticflickr.com/5510/14338202952_93595258ff_z.jpg'

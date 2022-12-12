@@ -15,7 +15,9 @@
     "mongodb": "^4.10.0",
     "next": "12.3.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react-dom": "^18.2.0",
+    "react-share": "^4.4.1",
+    "share-react": "^1.0.0",
     "web3modal": "^1.9.9"
   },
   "devDependencies": {
