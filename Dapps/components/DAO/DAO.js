@@ -79,11 +79,7 @@ const DAO = () => {
             </div>
             <button
               className={styles.dao_btn_advice}
-              onClick={() =>
-                Router.push(
-                  '/FsAj7QT2Szg8UKAcu76Z/0xb1BfB47518E59Ad7568F3b6b0a71733A41fC99ad'
-                )
-              }
+              onClick={() => Router.push('/votefordao/vote')}
             >
               <div className={styles.dao_vote_proposal}>
                 <svg
