@@ -26,7 +26,7 @@ function DAOProposalVote(props) {
         <meta name='twitter:type' content='article' />
         <meta
           name='twitter:image'
-          content='https://images.unsplash.com/photo-1670842587871-326b95acbc8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'
+          content='https://firebasestorage.googleapis.com/v0/b/majestic-post-306609.appspot.com/o/featuredImage%2F4kk.jpeg?alt=media&token=5af63f5a-8b4c-4acc-beb1-725a1b40fcc3'
         />
         <link rel='icon' href='/entericon.png' />
       </Head>
