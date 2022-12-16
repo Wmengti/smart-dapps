@@ -21,8 +21,6 @@ function DAOProposalVote(props) {
         <meta name='twitter:site' content='@pangmadee' />
         <meta name='twitter:title' content='0x3c test sub page web3' />
         <meta name='twitter:description' content='Twitter share card subpage' />
-        {/* <meta name='twitter:url' content='https://0x3c.xyz/dao_vote' />
-        <meta property='og:url' content='https://0x3c.xyz/dao_vote' /> */}
         <meta name='twitter:type' content='article' />
         <meta
           name='twitter:image'
