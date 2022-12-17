@@ -34,56 +34,122 @@ function DAOProposalVote(props) {
   );
 }
 
+// export async function getStaticProps() {
+//   // fetch data from an API
+//   const client = await MongoClient.connect(
+//     'mongodb+srv://0x3c:IwMB11GkkHZ4LKyV@cluster0.gnlmiqz.mongodb.net/dao?retryWrites=true&w=majority'
+//   );
+//   const db = client.db();
+
+//   const proposalsCollection = db.collection('dao_proposal');
+//   const filterProposal = await proposalsCollection
+//     .aggregate([
+//       {
+//         $group: {
+//           _id: '$id',
+//           max_date: {
+//             $max: '$time',
+//           },
+//           records: {
+//             $push: '$$ROOT',
+//           },
+//         },
+//       },
+//       {
+//         $project: {
+//           items: {
+//             $filter: {
+//               input: '$records',
+//               as: 'records',
+//               cond: {
+//                 $eq: ['$$records.time', '$max_date'],
+//               },
+//             },
+//           },
+//         },
+//       },
+//       {
+//         $unwind: '$items',
+//       },
+//       {
+//         $replaceWith: '$items',
+//       },
+//     ])
+//     .toArray();
+//   console.log(filterProposal);
+
+//   // const proposals = await proposalsCollection.find().toArray();
+
+//   client.close();
+
+//   return {
+//     props: {
+//       proposals: filterProposal.map((proposal) => ({
+//         title: proposal.title,
+//         time: proposal.time,
+//         reason: proposal.content,
+//         voteY: proposal.voteY,
+//         voteN: proposal.voteN,
+//         id: proposal.id,
+//       })),
+//     },
+//     revalidate: 1,
+//   };
+// }
 export async function getServerSideProps() {
   // fetch data from an API
-  const client = await MongoClient.connect(
-    'mongodb+srv://0x3c:IwMB11GkkHZ4LKyV@cluster0.gnlmiqz.mongodb.net/dao?retryWrites=true&w=majority'
-  );
-  const db = client.db();
+  try {
+    const client = await MongoClient.connect(
+      'mongodb+srv://0x3c:IwMB11GkkHZ4LKyV@cluster0.gnlmiqz.mongodb.net/dao?retryWrites=true&w=majority'
+    );
+    const db = client.db();
 
-  const proposalsCollection = db.collection('dao_proposal');
-  const filterProposal = await proposalsCollection
-    .aggregate([
-      {
-        $group: {
-          _id: '$id',
-          max_date: {
-            $max: '$time',
-          },
-          records: {
-            $push: '$$ROOT',
+    const proposalsCollection = db.collection('dao_proposal');
+    const filterProposal = await proposalsCollection
+      .aggregate([
+        {
+          $group: {
+            _id: '$id',
+            max_date: {
+              $max: '$time',
+            },
+            records: {
+              $push: '$$ROOT',
+            },
           },
         },
-      },
-      {
-        $project: {
-          items: {
-            $filter: {
-              input: '$records',
-              as: 'records',
-              cond: {
-                $eq: ['$$records.time', '$max_date'],
+        {
+          $project: {
+            items: {
+              $filter: {
+                input: '$records',
+                as: 'records',
+                cond: {
+                  $eq: ['$$records.time', '$max_date'],
+                },
               },
             },
           },
         },
-      },
-      {
-        $unwind: '$items',
-      },
-      {
-        $replaceWith: '$items',
-      },
-    ])
-    .toArray();
-  console.log(filterProposal);
+        {
+          $unwind: '$items',
+        },
+        {
+          $replaceWith: '$items',
+        },
+      ])
+      .toArray();
+    console.log(filterProposal);
 
-  // const proposals = await proposalsCollection.find().toArray();
+    // const proposals = await proposalsCollection.find().toArray();
 
-  client.close();
+    client.close();
+  } catch (error) {
+    console.error(error);
+  }
 
   return {
-    props: {
+    props: Object.freeze({
       proposals: filterProposal.map((proposal) => ({
         title: proposal.title,
         time: proposal.time,
@@ -92,7 +158,7 @@ export async function getServerSideProps() {
         voteN: proposal.voteN,
         id: proposal.id,
       })),
-    },
+    }),
     revalidate: 1,
   };
 }
