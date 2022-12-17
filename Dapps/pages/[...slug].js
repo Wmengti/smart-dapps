@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 import Head from 'next/head';
 import { MongoClient } from 'mongodb';
 import styles from '../../styles/dao_vote.module.css';
-import DAOvoteList from '../../components/DAO/DAOvoteList';
+import DAOvoteList from '../components/DAO/DAOvoteList';
 import { id } from 'ethers/lib/utils';
 import { useRouter } from 'next/router';
 import { TwitterShareButton } from 'react-share';
