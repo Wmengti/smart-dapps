@@ -98,55 +98,52 @@ function DAOProposalVote(props) {
 // }
 export async function getServerSideProps() {
   // fetch data from an API
-  try {
-    const client = await MongoClient.connect(
-      'mongodb+srv://0x3c:IwMB11GkkHZ4LKyV@cluster0.gnlmiqz.mongodb.net/dao?retryWrites=true&w=majority'
-    );
-    const db = client.db();
 
-    const proposalsCollection = db.collection('dao_proposal');
-    const filterProposal = await proposalsCollection
-      .aggregate([
-        {
-          $group: {
-            _id: '$id',
-            max_date: {
-              $max: '$time',
-            },
-            records: {
-              $push: '$$ROOT',
-            },
+  const client = await MongoClient.connect(
+    'mongodb+srv://0x3c:IwMB11GkkHZ4LKyV@cluster0.gnlmiqz.mongodb.net/dao?retryWrites=true&w=majority'
+  );
+  const db = client.db();
+
+  const proposalsCollection = db.collection('dao_proposal');
+  const filterProposal = await proposalsCollection
+    .aggregate([
+      {
+        $group: {
+          _id: '$id',
+          max_date: {
+            $max: '$time',
+          },
+          records: {
+            $push: '$$ROOT',
           },
         },
-        {
-          $project: {
-            items: {
-              $filter: {
-                input: '$records',
-                as: 'records',
-                cond: {
-                  $eq: ['$$records.time', '$max_date'],
-                },
+      },
+      {
+        $project: {
+          items: {
+            $filter: {
+              input: '$records',
+              as: 'records',
+              cond: {
+                $eq: ['$$records.time', '$max_date'],
               },
             },
           },
         },
-        {
-          $unwind: '$items',
-        },
-        {
-          $replaceWith: '$items',
-        },
-      ])
-      .toArray();
-    console.log(filterProposal);
+      },
+      {
+        $unwind: '$items',
+      },
+      {
+        $replaceWith: '$items',
+      },
+    ])
+    .toArray();
+  console.log(filterProposal);
 
-    // const proposals = await proposalsCollection.find().toArray();
+  // const proposals = await proposalsCollection.find().toArray();
 
-    client.close();
-  } catch (error) {
-    console.error(error);
-  }
+  client.close();
 
   return {
     props: Object.freeze({
@@ -159,7 +156,6 @@ export async function getServerSideProps() {
         id: proposal.id,
       })),
     }),
-    revalidate: 1,
   };
 }
 
