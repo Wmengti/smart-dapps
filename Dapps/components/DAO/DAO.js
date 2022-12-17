@@ -81,7 +81,7 @@ const DAO = () => {
               className={styles.dao_btn_advice}
               onClick={() =>
                 Router.push(
-                  '/bnEmgerQUFjSEQbC5PAI/0xb1BfB47518E59Ad7568F3b6b0a71733A41fC99ad'
+                  '/bnEmgerQUFjSEQbC5PAI/0xb1BfB47518E59AdfhdjF3b6b0a71733A41fC99ad'
                 )
               }
             >
