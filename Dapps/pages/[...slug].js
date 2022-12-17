@@ -34,7 +34,7 @@ function DAOProposalVote(props) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   // fetch data from an API
   const client = await MongoClient.connect(
     'mongodb+srv://0x3c:IwMB11GkkHZ4LKyV@cluster0.gnlmiqz.mongodb.net/dao?retryWrites=true&w=majority'
