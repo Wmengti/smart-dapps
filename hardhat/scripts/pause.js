@@ -1,9 +1,9 @@
-// We require the Hardhat Runtime Environment explicitly here. This is optional
-// but useful for running the script in a standalone fashion through `node <script>`.
-//
-// You can also run a script with `npx hardhat run <script>`. If you do that, Hardhat
-// will compile your contracts, add the Hardhat Runtime Environment's members to the
-// global scope, and execute the script.
+/*
+ * @Author: Wmengti 0x3ceth@gmail.com
+ * @LastEditTime: 2023-04-11 10:12:12
+ * @Description: 
+ */
+
 const { ethers } = require('hardhat');
 
 async function pause() {

@@ -1,6 +1,7 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Nextjs 框架
 
-## Getting Started
+为了更加熟悉 css，这里没有引入 css 库，基本采用原生 css，常用的 css 框架选用 tailwindss
+钱包交互使用的 web3modal，如果重建使用 rainbownme+wagmi 功能更加齐全好用
 
 First, run the development server:
 

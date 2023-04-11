@@ -1,3 +1,8 @@
+/*
+ * @Author: Wmengti 0x3ceth@gmail.com
+ * @LastEditTime: 2023-04-11 10:03:16
+ * @Description: Storing Constants and Paths
+ */
 const developmentChains = ['hardhat', 'localhost'];
 const VERIFICATION_BLOCK_CONFIRMATIONS = 6;
 const whitelistAddress = '../Dapps/constants/WLaddress.json';

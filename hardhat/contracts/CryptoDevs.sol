@@ -22,24 +22,38 @@ contract CryptoDevs is ERC721Enumerable, Ownable {
     IWhiteList whitelist;
     bool public wlminted;
 
+    /**
+     * @description: Mint can be paused manually
+     * @return {*}
+     */
     modifier onlyWhenNotPaused() {
         require(!_paused, "Contract currently paused");
         _;
     }
 
-    constructor(string memory _tokenbaseURI, address _whitelistContract)
-        ERC721("CryptoDevs", "CD")
-    {
+    constructor(
+        string memory _tokenbaseURI,
+        address _whitelistContract
+    ) ERC721("CryptoDevs", "CD") {
         _baseTokenURI = _tokenbaseURI;
         whitelist = IWhiteList(_whitelistContract);
     }
 
+    /**
+     * @description: set the time of mint
+     * @param {uint256} _time
+     * @return {*}
+     */
     function startPresale(uint256 _time) public onlyOwner {
         require(!presaleStarted, "presale has started!");
         presaleStarted = true;
         presaleEnded = block.timestamp + _time * 1 minutes;
     }
 
+    /**
+     * @description: Multiple conditions are met at the same time
+     * @return {*}
+     */
     function presaleMint() public payable onlyWhenNotPaused {
         require(
             presaleStarted && block.timestamp < presaleEnded,
