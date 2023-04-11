@@ -1,6 +1,6 @@
 ## Smart Contract by hardhat
 
-##模块解析
+## 模块解析
 ### 白名单
 - contracts/WhiteList.sol
 设置白名单总数，在没有达到总数的任何时间都可以mint
